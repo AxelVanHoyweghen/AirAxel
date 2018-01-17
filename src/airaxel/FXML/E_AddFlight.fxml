@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="airaxel.E_AddFlightController">
+    <children>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <JFXButton fx:id="btnEmployeeHome" minHeight="25.0" minWidth="120.0" onAction="#goToE_home" style="-fx-background-color: #4059a9;" text="Employee home" textFill="WHITE" />
+            <JFXButton fx:id="btnGoHome" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" minHeight="25.0" minWidth="50.0" onAction="#goTo_Welcome" style="-fx-background-color: #4059a9;" text="Home" textAlignment="CENTER" textFill="WHITE" />
+         </items>
+      </ToolBar>
+      <AnchorPane layoutX="200.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <HBox layoutX="48.0" layoutY="37.0" spacing="40.0" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="60.0">
+               <children>
+                  <VBox prefHeight="235.0" prefWidth="233.0" spacing="20.0">
+                     <children>
+                        <JFXTextField fx:id="txtOrigin" promptText="Origin" />
+                        <JFXTextField fx:id="txtDestination" promptText="Destination" />
+                        <JFXTextField fx:id="txtDistance" promptText="Distance" />
+                        <JFXComboBox fx:id="cboAircraft" onShowing="#setCboAircraft" prefHeight="31.0" prefWidth="235.0" promptText="Aircraft" />
+                        <JFXTextField fx:id="txtPrice" promptText="Price" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="235.0" prefWidth="233.0" spacing="20.0">
+                     <children>
+                        <JFXDatePicker fx:id="DateDepartureDate" defaultColor="#4059a9" promptText="Departure date" />
+                        <JFXTextField fx:id="txtDepartureTime" promptText="Departure Time(24-hour)(hh:mm)" />
+                        <JFXDatePicker fx:id="DateArrivalDate" defaultColor="#4059a9" promptText="Arrival date" />
+                        <JFXTextField fx:id="txtArrivalTime" promptText="Arrival Time(24-hour)(hh:mm)" />
+                        <JFXTextField fx:id="txtTotalTime" promptText="Total time(min)" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <JFXButton fx:id="btnAddFlight" layoutX="250.0" layoutY="313.0" minWidth="120.0" onAction="#AddFlight" style="-fx-background-color: #4059a9;" text="Add flight" textFill="WHITE" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="237.0" />
+            <Label fx:id="lblTitle" alignment="CENTER" layoutX="282.0" layoutY="21.0" text="Add Flight" textFill="#4059a9" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+	  </children>
+</AnchorPane>

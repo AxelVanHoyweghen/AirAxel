@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="airaxel.C_WelcomeController">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <HBox alignment="CENTER_LEFT" prefHeight="16.0" prefWidth="328.0" spacing="8.0">
+               <children>
+                  <JFXButton fx:id="btnBookFlight" minWidth="120.0" onAction="#goToC_Booking" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #4059a9;" text="Book flight" textFill="WHITE" />
+                  <JFXButton fx:id="btnCancelReservation" minWidth="120.0" onAction="#goToC_Cancel" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #4059a9;" text="Cancel reservation" textFill="WHITE" />
+                  <JFXButton fx:id="btnViewItinerary" minWidth="120.0" onAction="#goToC_Itinerary" prefWidth="120.0" style="-fx-background-color: #4059a9;" text="View itinerary" textFill="WHITE" />
+                  <JFXButton fx:id="btnMakePayment" minHeight="25.0" minWidth="120.0" onAction="#goToC_Payment" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #4059a9;" text="Make payment" textFill="WHITE" />
+                  <JFXButton fx:id="btnGoHome" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" minHeight="25.0" minWidth="50.0" onAction="#goTo_Welcome" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #4059a9;" text="Home" textAlignment="CENTER" textFill="WHITE" />
+               </children>
+            </HBox>
+         </items>
+      </ToolBar>
+      <AnchorPane fx:id="SignUp" layoutY="40.0" prefHeight="400.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <JFXTextField fx:id="txtName" layoutX="23.0" layoutY="14.0" prefHeight="25.0" prefWidth="295.0" promptText="Full name" />
+            <JFXTextField fx:id="txtEmail" layoutX="23.0" layoutY="58.0" prefHeight="25.0" prefWidth="295.0" promptText="E-mail" />
+            <JFXTextField fx:id="txtPhone" layoutX="23.0" layoutY="101.0" prefHeight="25.0" prefWidth="175.0" promptText="Phone number" />
+            <JFXTextField fx:id="txtStreet" layoutX="23.0" layoutY="144.0" prefHeight="25.0" prefWidth="295.0" promptText="Street and house number" />
+            <JFXTextField fx:id="txtCity" layoutX="23.0" layoutY="186.0" prefHeight="25.0" prefWidth="160.0" promptText="City" />
+            <JFXTextField fx:id="txtZip" layoutX="211.0" layoutY="186.0" prefHeight="25.0" prefWidth="110.0" promptText="Zipcode" />
+            <JFXComboBox fx:id="cboCountry" layoutX="23.0" layoutY="227.0" prefHeight="25.0" prefWidth="135.0" promptText="Country" />
+            <HBox layoutX="23.0" layoutY="271.0" spacing="25.0">
+               <children>
+                  <JFXComboBox fx:id="cboIdentification" prefHeight="25.0" prefWidth="175.0" promptText="Identification document" />
+                  <JFXDatePicker fx:id="DateDoB" defaultColor="#4059a9" promptText="Date of Birth" />
+               </children>
+            </HBox>
+            <JFXTextField fx:id="txtIdentificationNo" layoutX="23.0" layoutY="311.0" prefHeight="25.0" prefWidth="175.0" promptText="Identification no" />
+            <JFXPasswordField fx:id="txtPassword" layoutX="397.0" layoutY="58.0" prefHeight="25.0" prefWidth="160.0" promptText="Password" />
+            <JFXPasswordField fx:id="txtPassword2" layoutX="397.0" layoutY="101.0" onAction="#Submit" prefHeight="25.0" prefWidth="160.0" promptText="Re-type password" />
+            <JFXButton fx:id="btnSubmit" layoutX="397.0" layoutY="215.0" minWidth="120.0" onAction="#Submit" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #4059a9;" text="Submit" textFill="WHITE" />
+            <Label fx:id="lblError" layoutX="397.0" layoutY="148.0" prefHeight="49.0" prefWidth="160.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="LogInPane" layoutX="238.0" layoutY="120.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <VBox layoutX="203.0" layoutY="55.0" prefHeight="170.0" prefWidth="237.0" spacing="35.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="185.0" AnchorPane.topAnchor="120.0">
+               <children>
+                  <VBox spacing="20.0">
+                     <children>
+                        <JFXTextField fx:id="txtUserName" alignment="CENTER" promptText="Username" />
+                        <JFXPasswordField fx:id="txtPasswordLogin" alignment="CENTER" onAction="#SignIn" promptText="Password" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" spacing="15.0">
+                     <children>
+                        <JFXButton fx:id="btnLogIn" alignment="CENTER" buttonType="RAISED" onAction="#SignIn" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: #4059a9;" text="Log in " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnSignUp" alignment="CENTER" buttonType="RAISED" onAction="#SignUp" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: #4059a9;" text="Sign Up" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnLogOut" alignment="CENTER" buttonType="RAISED" onAction="#LogOut" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: #4059a9;" text="Log out" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="145.0" layoutY="49.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+               <children>
+                  <Label text="Login or sign up to our membership program" textFill="#4059a9">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label text="or continue without signing-in" textFill="#4059a9">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

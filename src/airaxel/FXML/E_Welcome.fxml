@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="MainAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="airaxel.E_WelcomeController">
+    <children>
+      <ToolBar minHeight="40.0" minWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <JFXButton fx:id="btnEmployeeHome" minHeight="25.0" minWidth="120.0" onAction="#goToE_home" style="-fx-background-color: #4059a9;" text="Employee home" textFill="WHITE" />
+            <JFXButton fx:id="btnGoHome" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" minHeight="25.0" minWidth="50.0" onAction="#goTo_Welcome" style="-fx-background-color: #4059a9;" text="Home" textAlignment="CENTER" textFill="WHITE" />
+         </items>
+      </ToolBar>
+      <AnchorPane layoutX="6.0" layoutY="200.0" minHeight="200.0" minWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <VBox alignment="CENTER" layoutY="100.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER" spacing="30.0">
+                     <children>
+                        <JFXButton fx:id="btnFlightInfo" minHeight="25.0" minWidth="160.0" onAction="#goToE_FlightInfo" style="-fx-background-color: #4059a9;" text="Flight information" textFill="WHITE" />
+                        <JFXButton fx:id="btnUpdateFlight" minHeight="25.0" minWidth="160.0" onAction="#goToE_UpdateFlight" style="-fx-background-color: #4059a9;" text="Update flight information" textFill="WHITE" />
+                        <JFXButton fx:id="btnLiveTracking" minHeight="25.0" minWidth="160.0" onAction="#goToE_LiveInfo" style="-fx-background-color: #4059a9;" text="Live tracking" textFill="WHITE" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" spacing="30.0">
+                     <children>
+                        <JFXButton fx:id="btnAddFlight" minHeight="25.0" minWidth="160.0" onAction="#goToE_AddFlight" style="-fx-background-color: #4059a9;" text="Add flight" textFill="WHITE" />
+                        <JFXButton fx:id="btnDeleteFlight" minHeight="25.0" minWidth="160.0" onAction="#goToE_DeleteFlight" style="-fx-background-color: #4059a9;" text="Cancel flight" textFill="WHITE" />
+                        <JFXButton fx:id="btnAddAirport" minHeight="25.0" minWidth="160.0" onAction="#goToE_AddAirport" style="-fx-background-color: #4059a9;" text="Add airport" textFill="WHITE" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

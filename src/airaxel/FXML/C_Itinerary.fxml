@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="airaxel.C_ItineraryController">
+     <children>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <HBox alignment="CENTER_LEFT" prefHeight="16.0" prefWidth="328.0" spacing="8.0">
+               <children>
+                  <JFXButton fx:id="btnBookFlight" minWidth="120.0" onAction="#goToC_Booking" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #4059a9;" text="Book flight" textFill="WHITE" />
+                  <JFXButton fx:id="btnCancelReservation" minWidth="120.0" onAction="#goToC_Cancel" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #4059a9;" text="Cancel reservation" textFill="WHITE" />
+                  <JFXButton fx:id="btnViewItinerary" minWidth="120.0" onAction="#goToC_Itinerary" prefWidth="120.0" style="-fx-background-color: #4059a9;" text="View itinerary" textFill="WHITE" />
+                  <JFXButton fx:id="btnMakePayment" minHeight="25.0" minWidth="120.0" onAction="#goToC_Payment" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #4059a9;" text="Make payment" textFill="WHITE" />
+                  <JFXButton fx:id="btnGoHome" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" minHeight="25.0" minWidth="50.0" onAction="#goTo_Welcome" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #4059a9;" text="Home" textAlignment="CENTER" textFill="WHITE" />
+               </children>
+            </HBox>
+         </items>
+      </ToolBar>
+      <AnchorPane fx:id="Itinerary" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <JFXTextArea fx:id="txtItinerary" layoutX="28.0" layoutY="34.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="30.0" />
+            <JFXButton fx:id="btnDone" alignment="CENTER" contentDisplay="CENTER" layoutX="502.0" layoutY="305.0" minHeight="25.0" minWidth="50.0" onAction="#Done" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #4059a9;" text="Done" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="20.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="searchPanel" layoutX="57.0" layoutY="110.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="213.0" layoutY="94.0" spacing="25.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="180.0">
+               <children>
+                  <JFXTextField fx:id="txtBookingNo" alignment="CENTER" minHeight="25.0" minWidth="213.0" onAction="#View" promptText="Booking number" />
+                  <JFXButton fx:id="btnView" minHeight="25.0" minWidth="120.0" onAction="#View" style="-fx-background-color: #4059a9;" text="View itinerary" textFill="WHITE" />
+               </children>
+            </VBox>
+            <Label alignment="CENTER" layoutX="188.0" layoutY="14.0" text="View itinerary" textAlignment="CENTER" textFill="#4059a9" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
