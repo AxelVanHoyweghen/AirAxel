@@ -8,7 +8,7 @@ FILES ATTACHED:
 -Folder "Seperate DB Files": Contain the seperate sql files(not needed).
 -Folder "src/": Contains the java application and required api's and files.
 -"Axel_Van_Hoyweghen_Paper.PDF": The project report.
-
+-"Jfoenix.jar" and "mysql-connector-java-5.0.8-bin.jar" are libraries that need to be added to the project
 TESTED:
 The application was tested on the machine it was created on(Windows 10) and on a computer(Windows 10) that did not had MySQL Workbench and server or Java JRE and JDK installed. These where first installed and than the programm was initialized and executed as in the steps below. 
 
